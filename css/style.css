@@ -67,11 +67,15 @@ a {
   text-align: center;
   background-color: var(--banner-bg-clr);
 }
+.banner-content h1{
+  text-transform: capitalize;
+}
 .heading {
 }
 .heading h1 {
   text-align: center;
   margin: 50px auto;
+  text-transform: capitalize;
 }
 .box-area {
   box-sizing: border-box;
