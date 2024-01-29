@@ -11,6 +11,10 @@
   --btm-box-clr-5: rgb(21, 141, 174);
   --btm-box-clr-6: rgb(169, 55, 141);
 }
+body {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
