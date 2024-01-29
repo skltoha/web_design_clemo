@@ -1,14 +1,15 @@
-:root{
+:root {
   --container-width: 1100px;
   --container-padding: 2rem;
-  --banner-bg-clr:rgb(248, 157, 46);
-  --box-img-bg-clr:rgb(5, 104, 104);
-  --btm-box-clr-1:rgb(189, 112, 252);
-  --btm-box-clr-2:rgb(70, 83, 229);
-  --btm-box-clr-3:rgb(251, 181, 52);
-  --btm-box-clr-4:rgb(70, 163, 54);
-  --btm-box-clr-5:rgb(21, 141, 174);
-  --btm-box-clr-6:rgb(169, 55, 141);
+  --nav-bg-clr: rgb(255, 255, 255);
+  --banner-bg-clr: rgb(239, 172, 48);
+  --box-img-bg-clr: rgb(5, 104, 104);
+  --btm-box-clr-1: rgb(189, 112, 252);
+  --btm-box-clr-2: rgb(70, 83, 229);
+  --btm-box-clr-3: rgb(251, 181, 52);
+  --btm-box-clr-4: rgb(70, 163, 54);
+  --btm-box-clr-5: rgb(21, 141, 174);
+  --btm-box-clr-6: rgb(169, 55, 141);
 }
 * {
   margin: 0;
@@ -21,7 +22,11 @@ a {
 
 /* navbar started */
 #navigation {
-  margin: 20px 0px;
+  background-color: var(--nav-bg-clr);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .container {
   width: min(var(--container-width), 100% - var(--container-padding));
@@ -30,10 +35,13 @@ a {
 .nav-main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-logo {
 }
 .nav-logo img {
+  width: 100px;
+  height: auto;
 }
 .nav-list {
   display: flex;
@@ -46,10 +54,13 @@ a {
 }
 .nav-list ul li a {
   padding: 10px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 /* navbar end */
 
 #banner-section {
+  margin-top: 50px;
 }
 .banner-content {
   padding: 100px 0px;
@@ -65,7 +76,7 @@ a {
 .box-area {
   box-sizing: border-box;
   display: grid;
-  gap: 10px;
+  column-gap: 50px;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-template-areas:
     "one"
@@ -101,9 +112,9 @@ a {
       "one two"
       "four three"
       "five six" !important;
-    margin: 100px auto !important;
+    margin-bottom: 100px !important;
   }
-  .box-text{
+  .box-text {
     margin-bottom: 0px;
   }
 }
@@ -127,6 +138,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  padding: 20px;
 }
 .box-text h3 {
 }
