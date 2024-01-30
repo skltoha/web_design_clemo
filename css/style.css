@@ -38,7 +38,6 @@ img {
   margin-inline: auto;
 }
 
-
 /* navbar started */
 #navigation {
   position: fixed;
@@ -154,10 +153,9 @@ img {
   .nav-list ul li {
     display: inline-block;
   }
-  .nav-list ul li a{
+  .nav-list ul li a {
     color: var(--nav-text-clr);
   }
-  
 }
 @media (max-width: 700px) {
   .nav-pop {
@@ -169,7 +167,7 @@ img {
     left: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, 0.3);
     display: none;
     padding: 20px 0px;
   }
@@ -178,7 +176,7 @@ img {
   .nav-list ul li {
     padding: 10px 10px;
   }
-  .nav-list ul li a{
+  .nav-list ul li a {
     color: var(--nav-text2-clr);
   }
 }
