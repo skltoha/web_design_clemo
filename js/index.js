@@ -38,8 +38,21 @@ window.addEventListener('scroll', function() {
   }
 });
 
+let lastScrollPosition = window.scrollY;
+
 document.querySelector('.nav-pop').addEventListener('click', function() {
   this.classList.toggle('active'); // Toggle active class for rotation
   const navList = document.querySelector('.nav-list');
   navList.classList.toggle("active");
+  lastScrollPosition = window.scrollY;
+});
+
+
+// Add event listener for window scroll
+window.addEventListener('scroll', function() {
+  const currentScrollPosition = window.scrollY;
+  if (Math.abs(currentScrollPosition - lastScrollPosition) > 5) {
+    removeActiveClass(); // Remove active classes
+  }
+  lastScrollPosition = currentScrollPosition; // Update last scroll position
 });
