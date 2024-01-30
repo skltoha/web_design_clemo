@@ -20,7 +20,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+ul,
+li {
+  list-style: none;
+}
 a {
   text-decoration: none;
 }
@@ -56,54 +59,121 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.nav-list {
-  display: flex;
-}
-.nav-list ul {
-  list-style: none;
-}
-.nav-list ul li {
-  display: inline-block;
-}
-.nav-list ul li a {
-  padding: 10px 20px;
-  text-transform: capitalize;
-  text-decoration: none;
-  color: var(--nav-text-clr);
   position: relative;
 }
 
-.nav-list ul li a::before {
+.nav-pop {
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background: black;
+}
+.center::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  transform: translate(0, -50%);
+  background: black;
+}
+.bottom::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
-  height: 5px;
-  transition: width 0.3s ease, background 0.3s ease; /* Transition both width and background */
+  width: 20px;
+  height: 3px;
+  background: black;
+}
+.nav-pop.active .top::before {
+  transform: rotate(45deg); /* Rotate top line */
+  top: 8px; /* Adjust top position */
 }
 
-.nav-list ul li a:hover::before {
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    var(--random-color-1),
-    var(--random-color-2)
-  ); /* Random gradient color on hover */
-}
-.nav-pop {
-  display: none;
+.nav-pop.active .center::before {
+  opacity: 0; /* Hide center line */
 }
 
-@media (max-width: 600px) {
-  .nav-list {
+.nav-pop.active .bottom::before {
+  transform: rotate(-45deg); /* Rotate bottom line */
+  top: 8px; /* Adjust top position */
+}
+
+@media (min-width: 700px) {
+  .nav-pop {
     display: none;
   }
+  .nav-list {
+    display: block;
+  }
+  .nav-list {
+    display: flex;
+  }
+  .nav-list ul {
+    list-style: none;
+  }
+  .nav-list ul li {
+    display: inline-block;
+  }
+  .nav-list ul li a {
+    padding: 10px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--nav-text-clr);
+    position: relative;
+  }
+
+  .nav-list ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    transition: width 0.3s ease, background 0.3s ease; /* Transition both width and background */
+  }
+
+  .nav-list ul li a:hover::before {
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      var(--random-color-1),
+      var(--random-color-2)
+    ); /* Random gradient color on hover */
+  }
 }
-@media (max-width: 600px){
+@media(max-width: 700px) {
   .nav-pop{
     display: block;
+  }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    /* display: none; */
+  }
+  .nav-list ul{}
+  .nav-list ul li{
+    padding: 10px 0px;
+  }
+  .nav-list ul li a{
+    color: black;
   }
 }
 

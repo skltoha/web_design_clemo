@@ -22,3 +22,17 @@ window.addEventListener('scroll', function() {
     navigation.style.borderColor = 'transparent'; // Reset background color when scrolled to the top
   }
 });
+
+
+document.querySelector('.nav-pop').addEventListener('click', function() {
+  this.classList.toggle('active'); // Toggle active class for rotation
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navPop = document.getElementById("nav-pop");
+  const navList = document.getElementById("nav-list");
+
+  navPop.addEventListener("click", function() {
+    navList.classList.toggle("active");
+  });
+});
