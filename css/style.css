@@ -32,8 +32,14 @@ img {
   width: 100%;
   height: auto;
 }
-/* navbar started */
 
+.set-container {
+  width: min(var(--container-width), 100% - var(--container-padding));
+  margin-inline: auto;
+}
+
+
+/* navbar started */
 #navigation {
   position: fixed;
   top: 0;
@@ -44,12 +50,6 @@ img {
   z-index: 1000; /* Ensure navigation appears above other content */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
-
-.container {
-  width: min(var(--container-width), 100% - var(--container-padding));
-  margin-inline: auto;
-}
-
 .nav-logo {
 }
 .nav-logo img {
@@ -118,6 +118,7 @@ img {
   text-transform: capitalize;
   text-decoration: none;
   position: relative;
+  text-shadow: 2px 2px 10px white;
 }
 
 .nav-list ul li a::before {
@@ -135,8 +136,7 @@ img {
   background: linear-gradient(
     to right,
     var(--random-color-1),
-    var(--random-color-2),
-    var(--random-color-3)
+    var(--random-color-2)
   ); /* Random gradient color on hover */
 }
 
