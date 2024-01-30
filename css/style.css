@@ -154,7 +154,7 @@ img {
 }
 
 .box-img {
-  background-color: var(--box-img-bg-clr);
+  /* background-color: var(--box-img-bg-clr); */
   width: min(400px, 100%-10px);
   aspect-ratio: 1/1;
   display: flex;
