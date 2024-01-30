@@ -13,6 +13,21 @@ document.querySelectorAll('.nav-list ul li a').forEach(function(item) {
   });
 });
 
+function removeActiveClass() {
+  const navPop = document.querySelector('.nav-pop');
+  const navList = document.querySelector('.nav-list');
+
+  navPop.classList.remove('active');
+  navList.classList.remove('active');
+}
+
+// Add event listener for window resize
+window.addEventListener('resize', function() {
+  // Check if screen width is up to 700px
+  if (window.innerWidth >= 700) {
+    removeActiveClass(); // Remove active classes
+  }
+});
 
 window.addEventListener('scroll', function() {
   var navigation = document.getElementById('navigation');
