@@ -2,6 +2,7 @@
   --container-width: 1148px;
   --container-padding: 2rem;
   --nav-bg-clr: rgb(255, 255, 255);
+  --nav-text-clr: rgb(0, 0, 0);
   --banner-bg-clr: rgb(239, 172, 48);
   --box-img-bg-clr: rgb(5, 104, 104);
   --btm-box-clr-1: rgb(189, 112, 252);
@@ -63,7 +64,25 @@ img {
   padding: 10px 20px;
   text-transform: capitalize;
   text-decoration: none;
+  color: var(--nav-text-clr);
+  position: relative;
 }
+
+.nav-list ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  transition: width 0.3s ease, background 0.3s ease; /* Transition both width and background */
+}
+
+.nav-list ul li a:hover::before {
+  width: 100%;
+  background: linear-gradient(to right, var(--random-color-1), var(--random-color-2)); /* Random gradient color on hover */
+}
+
 /* navbar end */
 
 #banner-section {
