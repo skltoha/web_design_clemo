@@ -163,9 +163,6 @@ img {
   .nav-pop {
     display: block;
   }
-  #navigation{
-    /* position: relative; */
-  }
   .nav-list {
     position: absolute;
     top: 100%;
@@ -174,6 +171,7 @@ img {
     height: auto;
     background-color: rgba(0,0,0,.3);
     display: none;
+    padding: 20px 0px;
   }
   .nav-list ul {
   }
@@ -187,7 +185,6 @@ img {
 .nav-list.active {
   display: block;
 }
-
 /* navbar end */
 
 #banner-section {
