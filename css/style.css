@@ -151,7 +151,8 @@ img {
     background: linear-gradient(
       to right,
       var(--random-color-1),
-      var(--random-color-2)
+      var(--random-color-2),
+      var(--random-color-3)
     ); /* Random gradient color on hover */
   }
 }
