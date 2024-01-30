@@ -3,6 +3,7 @@
   --container-padding: 2rem;
   --nav-bg-clr: rgb(255, 255, 255);
   --nav-text-clr: rgb(0, 0, 0);
+  --nav-text2-clr: rgb(255, 255, 255);
   --banner-bg-clr: rgb(239, 172, 48);
   --box-img-bg-clr: rgb(5, 104, 104);
   --btm-box-clr-1: rgb(189, 112, 252);
@@ -59,7 +60,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .nav-pop {
@@ -112,14 +113,39 @@ img {
   top: 8px; /* Adjust top position */
 }
 
+.nav-list ul li a {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-list ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  transition: width 0.3s ease, background 0.3s ease; /* Transition both width and background */
+}
+
+.nav-list ul li a:hover::before {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--random-color-1),
+    var(--random-color-2),
+    var(--random-color-3)
+  ); /* Random gradient color on hover */
+}
+
 @media (min-width: 700px) {
   .nav-pop {
     display: none;
   }
   .nav-list {
     display: block;
-  }
-  .nav-list {
     display: flex;
   }
   .nav-list ul {
@@ -128,37 +154,17 @@ img {
   .nav-list ul li {
     display: inline-block;
   }
-  .nav-list ul li a {
-    padding: 10px 20px;
-    text-transform: capitalize;
-    text-decoration: none;
+  .nav-list ul li a{
     color: var(--nav-text-clr);
-    position: relative;
   }
-
-  .nav-list ul li a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 5px;
-    transition: width 0.3s ease, background 0.3s ease; /* Transition both width and background */
-  }
-
-  .nav-list ul li a:hover::before {
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      var(--random-color-1),
-      var(--random-color-2),
-      var(--random-color-3)
-    ); /* Random gradient color on hover */
-  }
+  
 }
-@media(max-width: 700px) {
-  .nav-pop{
+@media (max-width: 700px) {
+  .nav-pop {
     display: block;
+  }
+  #navigation{
+    /* position: relative; */
   }
   .nav-list {
     position: absolute;
@@ -166,16 +172,20 @@ img {
     left: 0;
     width: 100%;
     height: auto;
-    background-color: transparent;
+    background-color: rgba(0,0,0,.3);
     display: none;
   }
-  .nav-list ul{}
-  .nav-list ul li{
-    padding: 10px 0px;
+  .nav-list ul {
+  }
+  .nav-list ul li {
+    padding: 10px 10px;
   }
   .nav-list ul li a{
-    color: black;
+    color: var(--nav-text2-clr);
   }
+}
+.nav-list.active {
+  display: block;
 }
 
 /* navbar end */

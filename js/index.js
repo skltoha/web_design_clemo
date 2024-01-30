@@ -23,16 +23,8 @@ window.addEventListener('scroll', function() {
   }
 });
 
-
 document.querySelector('.nav-pop').addEventListener('click', function() {
   this.classList.toggle('active'); // Toggle active class for rotation
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const navPop = document.getElementById("nav-pop");
-  const navList = document.getElementById("nav-list");
-
-  navPop.addEventListener("click", function() {
-    navList.classList.toggle("active");
-  });
+  const navList = document.querySelector('.nav-list');
+  navList.classList.toggle("active");
 });
