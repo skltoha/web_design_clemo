@@ -30,12 +30,16 @@ img {
 }
 /* navbar started */
 #navigation {
-  background-color: var(--nav-bg-clr);
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  border-bottom: 2px solid transparent; /* Initial transparent border */
+  transition: border-color 0.3s ease; /* Transition border color */
+  z-index: 1000; /* Ensure navigation appears above other content */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
+
 .container {
   width: min(var(--container-width), 100% - var(--container-padding));
   margin-inline: auto;
@@ -86,7 +90,7 @@ img {
 /* navbar end */
 
 #banner-section {
-  margin-top: 50px;
+  margin-top: 55px;
   background-image: url("../images/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;

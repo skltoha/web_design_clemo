@@ -12,3 +12,13 @@ document.querySelectorAll('.nav-list ul li a').forEach(function(item) {
     this.style.setProperty('--random-color-3', randomColor3);
   });
 });
+
+
+window.addEventListener('scroll', function() {
+  var navigation = document.getElementById('navigation');
+  if (window.scrollY > 0) {
+    navigation.style.borderColor = 'rgba(0, 0, 0, 1)'; // Change background color on scroll
+  } else {
+    navigation.style.borderColor = 'transparent'; // Reset background color when scrolled to the top
+  }
+});
