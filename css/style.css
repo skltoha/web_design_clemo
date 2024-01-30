@@ -174,10 +174,11 @@ img {
   .nav-list ul {
   }
   .nav-list ul li {
-    padding: 10px 10px;
   }
   .nav-list ul li a {
     color: var(--nav-text2-clr);
+    display: inline-block;
+    width: 100%;
   }
 }
 .nav-list.active {
