@@ -47,6 +47,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 10px 0px;
   border-bottom: 2px solid transparent; /* Initial transparent border */
   transition: border-color 0.3s ease; /* Transition border color */
   z-index: 1000; /* Ensure navigation appears above other content */
@@ -125,7 +126,7 @@ img {
   text-transform: capitalize;
   text-decoration: none;
   position: relative;
-  text-shadow: 2px 2px 10px white;
+  text-shadow: 2px 2px 5px var(--nav-bar-clr);
 }
 
 .nav-list ul li a::before {
@@ -195,7 +196,7 @@ img {
 /* navbar end */
 
 #banner-section {
-  margin-top: 55px;
+  margin-top: 52px;
   background-image: url("../images/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
