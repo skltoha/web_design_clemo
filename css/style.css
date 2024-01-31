@@ -4,6 +4,9 @@
   --nav-bg-clr: rgb(255, 255, 255);
   --nav-text-clr: rgb(0, 0, 0);
   --nav-text2-clr: rgb(255, 255, 255);
+  --nav-animation-time: .5s;
+  --nav-bar-clr: rgb(237, 117, 47);
+  --nav-bar-close-clr: rgb(255, 0, 0);
   --banner-bg-clr: rgb(239, 172, 48);
   --box-img-bg-clr: rgb(5, 104, 104);
   --btm-box-clr-1: rgb(189, 112, 252);
@@ -77,7 +80,8 @@ img {
   left: 0;
   width: 20px;
   height: 3px;
-  background: black;
+  background: var(--nav-bar-clr);
+  transition: var(--nav-animation-time);
 }
 .center::before {
   content: "";
@@ -87,7 +91,8 @@ img {
   width: 20px;
   height: 3px;
   transform: translate(0, -50%);
-  background: black;
+  background: var(--nav-bar-clr);
+  transition: var(--nav-animation-time);
 }
 .bottom::before {
   content: "";
@@ -96,11 +101,13 @@ img {
   left: 0;
   width: 20px;
   height: 3px;
-  background: black;
+  background: var(--nav-bar-clr);
+  transition: var(--nav-animation-time);
 }
 .nav-pop.active .top::before {
   transform: rotate(45deg); /* Rotate top line */
   top: 8px; /* Adjust top position */
+  background: var(--nav-bar-close-clr);
 }
 
 .nav-pop.active .center::before {
@@ -110,6 +117,7 @@ img {
 .nav-pop.active .bottom::before {
   transform: rotate(-45deg); /* Rotate bottom line */
   top: 8px; /* Adjust top position */
+  background: var(--nav-bar-close-clr);
 }
 
 .nav-list ul li a {
