@@ -30,6 +30,7 @@ li {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 img {
   width: 100%;
@@ -352,3 +353,9 @@ img {
   }
 }
 /* bottom box area end */
+
+
+/* copy section start */
+.copy-section{}
+.copy-write{}
+/* copy section end */
