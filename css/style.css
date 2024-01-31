@@ -2,7 +2,7 @@
   --container-width: 1148px;
   --container-padding: 2rem;
   --nav-bg-clr: rgb(255, 255, 255);
-  --nav-text-clr: rgb(0, 0, 0);
+  --nav-text-clr: rgb(237, 117, 47);
   --nav-text2-clr: rgb(255, 255, 255);
   --nav-animation-time: .5s;
   --nav-bar-clr: rgb(237, 117, 47);
@@ -126,7 +126,6 @@ img {
   text-transform: capitalize;
   text-decoration: none;
   position: relative;
-  text-shadow: 2px 2px 5px var(--nav-bar-clr);
 }
 
 .nav-list ul li a::before {
@@ -179,6 +178,7 @@ img {
     background-color: rgba(0, 0, 0, 0.3);
     display: none;
     padding: 20px 0px;
+    text-shadow: 2px 2px 5px var(--nav-bar-clr);
   }
   .nav-list ul {
   }
